@@ -1,5 +1,5 @@
 import { AppBar, Button, makeStyles, Typography } from "@material-ui/core";
-import { red, yellow } from "@material-ui/core/colors";
+import { yellow } from "@material-ui/core/colors";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PopupWrapper from "../PopupWrapper/PopupWrapper";
