@@ -1,5 +1,5 @@
 import { AppBar, Button, makeStyles, Typography } from "@material-ui/core";
-import { red } from "@material-ui/core/colors";
+import { red, yellow } from "@material-ui/core/colors";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PopupWrapper from "../PopupWrapper/PopupWrapper";
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     padding: "1vh 1vw 1vh 1vw",
-    backgroundColor: red[600],
+    backgroundColor: yellow[800],
   },
   link: {
     textDecoration: "none",
@@ -36,7 +36,7 @@ export default function AdminNav({ handleLogout, currentUser }) {
       <AppBar className={classes.appbar}>
         <Link to="/" className={classes.link}>
           <Button className={classes.link}>
-            <Typography>Seacoast Capital</Typography>
+            <Typography>Storybook Ball</Typography>
           </Button>
         </Link>
         {currentUser.firstname.toLowerCase() === "evyn" ? (
