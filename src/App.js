@@ -11,7 +11,7 @@ import AdminContainer from "./containers/AdminContainer/AdminContainer";
 
 const useStyles = makeStyles((theme) => ({
   app: {
-    background: "rgb(132,184,197)",
+    background: "rgb(236,197,83)",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
