@@ -15,6 +15,27 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(242,215,128, .8)",
     padding: "3vh 0 1vh 0",
   },
+  name: {
+    width: "90%",
+    display: "flex",
+    flexFlow: "row wrap",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+  },
+  nameinput: {
+    color: "black",
+    backgroundColor: "white",
+    width: "40%",
+    border: "none",
+    fontSize: "1rem",
+    padding: "2vh 1vw 2vh 1vw",
+    margin: "1vh 0 1vh 0",
+    fontFamily: "Libre Baskerville",
+    letterSpacing: ".3rem",
+    "&:hover": {
+      backgroundColor: "rgba(255, 255,255, .5)",
+    },
+  },
   input: {
     color: "black",
     backgroundColor: "white",
@@ -32,7 +53,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function LoginForm(props) {
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+  });
   const classes = useStyles();
   const history = useHistory();
   const { setCurrentGuest } = props;
@@ -47,14 +72,21 @@ export default function LoginForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await createGuest(formData);
-      const guest = JSON.stringify(response);
-      setLoggedIn(guest);
-      setCurrentGuest(guest);
-      history.push("/event");
-    } catch (error) {
-      console.error(error);
+    if (
+      formData.pin.toLowerCase() ===
+      process.env.REACT_APP_EVENT_PASSWORD.toLowerCase()
+    ) {
+      try {
+        const response = await createGuest(formData);
+        const guest = JSON.stringify(response);
+        setLoggedIn(guest);
+        setCurrentGuest(guest);
+        history.push("/event");
+      } catch (error) {
+        console.error(error);
+      }
+    } else {
+      window.alert("incorrect pin, please try again");
     }
   };
 
@@ -65,30 +97,41 @@ export default function LoginForm(props) {
         handleSubmit(e);
       }}
     >
-      <input
-        className={classes.input}
-        label="First Name"
-        name="firstname"
-        placeholder="FIRST NAME..."
-        type="text"
-        onChange={(e) => handleChange(e)}
-        required
-      />
-      <input
-        className={classes.input}
-        label="Last Name"
-        name="lastname"
-        type="text"
-        placeholder="LAST NAME..."
-        onChange={(e) => handleChange(e)}
-        required
-      />
+      <div className={classes.name}>
+        <input
+          className={classes.nameinput}
+          label="First Name"
+          name="firstname"
+          placeholder="FIRST NAME..."
+          type="text"
+          onChange={(e) => handleChange(e)}
+          required
+        />
+        <input
+          className={classes.nameinput}
+          label="Last Name"
+          name="lastname"
+          type="text"
+          placeholder="LAST NAME..."
+          onChange={(e) => handleChange(e)}
+          required
+        />
+      </div>
       <input
         className={classes.input}
         label="Email"
         name="email"
         type="email"
         placeholder="EMAIL..."
+        onChange={(e) => handleChange(e)}
+        required
+      />
+      <input
+        className={classes.input}
+        label="Pin"
+        name="pin"
+        type="password"
+        placeholder="PIN..."
         onChange={(e) => handleChange(e)}
         required
       />
