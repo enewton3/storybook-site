@@ -2,14 +2,16 @@ import { makeStyles } from "@material-ui/core";
 import React from "react";
 import LoginForm from "../../components/LoginForm";
 // import HeaderGraphic from "../../components/HeaderGraphic";
-// import backgroundimg from "../../assets/eventbackground.jpg";
-// import Logo from "../../components/Logo";
+import backgroundimg from "../../assets/Background-Registration.png";
+import SBBLogo from "../../components/Logos/SBBLogo";
+import MGHLogo from "../../components/Logos/MGHLogo";
+import SupportButton from "../../components/SupportButton";
 
 const useStyles = makeStyles((theme) => ({
   welcome: {
     display: "flex",
-    // flexFlow: "column wrap",
-    // backgroundImage: `url(${backgroundimg})`,
+    flexFlow: "column wrap",
+    backgroundImage: `url(${backgroundimg})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -18,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100vw",
     textAlign: "center",
     alignItems: "center",
+    justifyContent: "space-evenly",
   },
   blurb: {
     margin: "10vh 0 10vh 0 ",
@@ -30,12 +33,13 @@ export default function Welcome({ currentGuest, setCurrentGuest }) {
 
   return (
     <div className={classes.welcome}>
-      {/* <HeaderGraphic /> */}
+      <SBBLogo width="30vw" />
+      <MGHLogo />
       <LoginForm
         currentGuest={currentGuest}
         setCurrentGuest={setCurrentGuest}
       />
-      {/* <Logo /> */}
+      <SupportButton />
     </div>
   );
 }

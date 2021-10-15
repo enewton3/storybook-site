@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { createGuest, setLoggedIn } from "../services/guests";
+import EnterButton from "./EnterButton";
 
 const useStyles = makeStyles((theme) => ({
   loginform: {
@@ -11,13 +12,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "40%",
     margin: "0 auto",
-    border: "3px solid white",
-    backgroundColor: "rgba(6,34,42, .2)",
+    backgroundColor: "rgba(242,215,128, .8)",
     padding: "3vh 0 1vh 0",
   },
   input: {
-    color: "white",
-    backgroundColor: "rgba(6, 34, 42, .7)",
+    color: "black",
+    backgroundColor: "white",
     width: "80%",
     border: "none",
     fontSize: "1rem",
@@ -26,34 +26,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Libre Baskerville",
     letterSpacing: ".3rem",
     "&:hover": {
-      backgroundColor: theme.palette.primary.dark,
-    },
-  },
-  button: {
-    backgroundColor: "rgba(6, 34, 42, .8)",
-    color: "white",
-    margin: "3vh auto",
-    fontSize: "1.2rem",
-    boxShadow: "2px 2px 5px black",
-    fontFamily: "Libre Baskerville",
-    padding: "2vh 3vw 2vh 3vw",
-    border: "none",
-    cursor: "pointer",
-    borderRadius: "10px",
-    letterSpacing: ".3rem",
-    "&:hover": {
-      backgroundColor: theme.palette.primary.dark,
-      color: "#FFF",
+      backgroundColor: "rgba(255, 255,255, .5)",
     },
   },
 }));
-
-// const CustomInput = withStyles({
-//   root: {
-//     color: "white",
-//   },
-//   input: { color: "white" },
-// })(TextField);
 
 export default function LoginForm(props) {
   const [formData, setFormData] = useState({});
@@ -91,7 +67,6 @@ export default function LoginForm(props) {
     >
       <input
         className={classes.input}
-        // variant="filled"
         label="First Name"
         name="firstname"
         placeholder="FIRST NAME..."
@@ -117,9 +92,7 @@ export default function LoginForm(props) {
         onChange={(e) => handleChange(e)}
         required
       />
-      <button className={classes.button} variant="outlined" type="submit">
-        ENTER
-      </button>
+      <EnterButton sendit={handleSubmit} />
     </form>
   );
 }

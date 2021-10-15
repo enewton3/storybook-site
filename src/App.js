@@ -8,12 +8,10 @@ import Event from "./screens/Event/Event";
 import Layout from "./components/shared/Layout";
 import { checkLoggedIn } from "./services/guests";
 import AdminContainer from "./containers/AdminContainer/AdminContainer";
-import backgroundimg from "./assets/eventbackground.jpg";
 
 const useStyles = makeStyles((theme) => ({
   app: {
     background: "rgb(132,184,197)",
-    backgroundImage: `url(${backgroundimg})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
