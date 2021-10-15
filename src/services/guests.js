@@ -13,7 +13,7 @@ export const checkLoggedIn = () => {
 
 export const createGuest = async (guestData) => {
   const response = await api.post("/storybook_guests", {
-    seacoast_guest: guestData,
+    storybook_guest: guestData,
   });
   return response.data;
 };

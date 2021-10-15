@@ -92,7 +92,7 @@ export default function LoginForm(props) {
         onChange={(e) => handleChange(e)}
         required
       />
-      <EnterButton sendit={handleSubmit} />
+      <EnterButton sendit={handleSubmit}>Enter</EnterButton>
     </form>
   );
 }
