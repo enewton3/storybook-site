@@ -21,7 +21,7 @@ export default function Logo({ width }) {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      Text 'Storybook' to phonenumber to give
+      Text 'Storybook' to 617-582-2098 to donate
     </div>
   );
 }

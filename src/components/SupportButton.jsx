@@ -4,7 +4,7 @@ import { Button, makeStyles, Typography, withStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   container: { textAlign: "center" },
   link: { textDecoration: "none" },
-  secondLink: { color: "white", textDecoration: "none" },
+  secondLink: { color: "blue", textDecoration: "none" },
   button: {
     backgroundColor: "rgb(11,34,88)",
     color: "white",
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     fontSize: "1.2rem",
   },
-  text: { fontFamily: "Libre Baskerville", paddingTop: "2vh" },
+  text: { fontFamily: "Libre Baskerville", paddingTop: "2vh", color: "blue" },
 }));
 
 const CustomButton = withStyles((theme) => ({

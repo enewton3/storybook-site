@@ -68,9 +68,21 @@ export default function Event({ currentGuest }) {
         <VimeoFrame />
       </div>
       <div className={classes.actionButtons}>
-        <EnterButton color={"red"}>Donate</EnterButton>
+        <a
+          href="https://www.storybookball.org/donate"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <EnterButton color={"red"}>Donate</EnterButton>
+        </a>
         <SupportButton />
-        <EnterButton color={"yellow"}>Celebrate</EnterButton>
+        <a
+          href="https://portlighting.zoom.us/j/81607340324?pwd=YWhJTUtvekp0Ui9COW1WVGw5ZlF4Zz09"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <EnterButton color={"yellow"}>Celebrate</EnterButton>
+        </a>
       </div>
     </div>
   );
