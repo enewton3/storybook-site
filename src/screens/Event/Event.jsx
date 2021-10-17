@@ -28,11 +28,41 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1vh",
   },
   header: {
-    width: "50vw",
+    width: "55vw",
     minHeight: "6.9vh",
+    "@media(max-width: 1024px)": {
+      width: "70vw",
+    },
+    "@media(max-width: 900px)": {
+      width: "80vw",
+    },
+    "@media(max-width: 800px)": {
+      width: "90vw",
+    },
+    "@media(max-width: 700px)": {
+      width: "100vw",
+    },
   },
   vimeoframe: {
-    width: "50vw",
+    width: "55vw",
+    "@media(max-width: 1400px)": {
+      width: "50vw",
+    },
+    "@media(max-width: 1200px)": {
+      width: "60vw",
+    },
+    "@media(max-width: 1024px)": {
+      width: "70vw",
+    },
+    "@media(max-width: 900px)": {
+      width: "80vw",
+    },
+    "@media(max-width: 800px)": {
+      width: "90vw",
+    },
+    "@media(max-width: 700px)": {
+      width: "100vw",
+    },
   },
   chatframe: {
     width: "30%",
@@ -43,9 +73,17 @@ const useStyles = makeStyles((theme) => ({
     flexFlow: "row wrap",
     width: "90vw",
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     position: "fixed",
     bottom: 0,
+    "@media(max-width: 300px)": { justifyContent: "center" },
+  },
+  support: {
+    position: "fixed",
+    bottom: 0,
+    "@media(max-width: 500px)": {
+      position: "relative",
+    },
   },
 }));
 
@@ -69,6 +107,9 @@ export default function Event({ currentGuest }) {
       <div className={classes.vimeoframe}>
         <VimeoFrame />
       </div>
+      <div className={classes.support}>
+        <SupportButton />
+      </div>
       <div className={classes.actionButtons}>
         <a
           href="https://www.storybookball.org/donate"
@@ -77,7 +118,6 @@ export default function Event({ currentGuest }) {
         >
           <EnterButton color={"red"}>Donate</EnterButton>
         </a>
-        <SupportButton />
         <a
           href="https://portlighting.zoom.us/j/81607340324?pwd=YWhJTUtvekp0Ui9COW1WVGw5ZlF4Zz09"
           target="_blank"

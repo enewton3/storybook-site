@@ -57,6 +57,7 @@ export default function LoginForm(props) {
     firstname: "",
     lastname: "",
     email: "",
+    pin: "",
   });
   const classes = useStyles();
   const history = useHistory();
@@ -86,7 +87,7 @@ export default function LoginForm(props) {
         console.error(error);
       }
     } else {
-      window.alert("incorrect pin, please try again");
+      window.alert("Incorrect pin, please try again");
     }
   };
 

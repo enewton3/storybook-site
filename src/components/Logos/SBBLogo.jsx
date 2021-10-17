@@ -7,6 +7,18 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: "center",
     zIndex: "50",
     width: "40vw",
+    "@media(max-width: 1024px)": {
+      width: "50vw",
+    },
+    "@media(max-width: 900px)": {
+      width: "60vw",
+    },
+    "@media(max-width: 800px)": {
+      width: "70vw",
+    },
+    "@media(max-width: 700px)": {
+      width: "80vw",
+    },
   },
 }));
 export default function SBBLogo({ width }) {

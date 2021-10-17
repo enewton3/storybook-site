@@ -7,6 +7,18 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: "center",
     zIndex: "50",
     width: "15vw",
+    "@media(max-width: 1024px)": {
+      width: "25vw",
+    },
+    "@media(max-width: 900px)": {
+      width: "35vw",
+    },
+    "@media(max-width: 800px)": {
+      width: "45vw",
+    },
+    "@media(max-width: 700px)": {
+      width: "55vw",
+    },
   },
 }));
 
