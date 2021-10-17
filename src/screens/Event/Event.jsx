@@ -15,10 +15,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexFlow: "column wrap",
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "space-around",
     // paddingBottom: "10vh",
     height: "100%",
-    // width: "100vw",
+    width: "100vw",
   },
   logos: {
     display: "flex",
@@ -41,9 +41,11 @@ const useStyles = makeStyles((theme) => ({
   actionButtons: {
     display: "flex",
     flexFlow: "row wrap",
-    width: "50vw",
+    width: "90vw",
     alignItems: "center",
     justifyContent: "space-evenly",
+    position: "fixed",
+    bottom: 0,
   },
 }));
 

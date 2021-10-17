@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     alignSelf: "center",
     zIndex: "50",
-    width: "50vw",
+    width: "40vw",
   },
 }));
 export default function SBBLogo({ width }) {

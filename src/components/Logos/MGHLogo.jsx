@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     alignSelf: "center",
     zIndex: "50",
-    width: "20vw",
+    width: "15vw",
   },
 }));
 
