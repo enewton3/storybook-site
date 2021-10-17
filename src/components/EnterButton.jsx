@@ -24,6 +24,10 @@ const CustomButton = withStyles((theme) => ({
   },
 }))(Button);
 
-export default function EnterButton({ sendit, children, color }) {
-  return <CustomButton onClick={sendit}>{children}</CustomButton>;
+export default function EnterButton({ type, sendit, children, color }) {
+  return (
+    <CustomButton type={type} onClick={sendit}>
+      {children}
+    </CustomButton>
+  );
 }
