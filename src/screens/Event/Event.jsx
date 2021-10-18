@@ -77,7 +77,8 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     bottom: 0,
     pointerEvents: "none",
-    "@media(max-width: 300px)": { justifyContent: "center" },
+    "@media(max-width: 550px)": { width: "90vw" },
+    "@media(max-width: 420px)": { justifyContent: "center" },
   },
   support: {
     position: "fixed",
