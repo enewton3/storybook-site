@@ -14,6 +14,21 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     backgroundColor: "rgba(242,215,128, .8)",
     padding: "3vh 0 1vh 0",
+    "@media(max-width: 1024px)": {
+      width: "50%",
+    },
+    "@media(max-width: 900px)": {
+      width: "60%",
+    },
+    "@media(max-width: 800px)": {
+      width: "70%",
+    },
+    "@media(max-width: 700px)": {
+      width: "80%",
+    },
+    // "@media(max-width: 700px)": {
+    //   width: "100%",
+    // },
   },
   name: {
     width: "90%",

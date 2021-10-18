@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   vimeoframe: {
-    width: "55vw",
+    width: "50vw",
     "@media(max-width: 1400px)": {
       width: "50vw",
     },
@@ -71,11 +71,12 @@ const useStyles = makeStyles((theme) => ({
   actionButtons: {
     display: "flex",
     flexFlow: "row wrap",
-    width: "90vw",
+    width: "60vw",
     alignItems: "center",
     justifyContent: "space-between",
     position: "fixed",
     bottom: 0,
+    pointerEvents: "none",
     "@media(max-width: 300px)": { justifyContent: "center" },
   },
   support: {
@@ -84,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
     "@media(max-width: 500px)": {
       position: "relative",
     },
+  },
+  button: {
+    pointerEvents: "auto",
   },
 }));
 
@@ -115,6 +119,7 @@ export default function Event({ currentGuest }) {
           href="https://www.storybookball.org/donate"
           target="_blank"
           rel="noreferrer"
+          className={classes.button}
         >
           <EnterButton color={"red"}>Donate</EnterButton>
         </a>
@@ -122,6 +127,7 @@ export default function Event({ currentGuest }) {
           href="https://portlighting.zoom.us/j/81607340324?pwd=YWhJTUtvekp0Ui9COW1WVGw5ZlF4Zz09"
           target="_blank"
           rel="noreferrer"
+          className={classes.button}
         >
           <EnterButton color={"yellow"}>Celebrate</EnterButton>
         </a>
