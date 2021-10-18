@@ -14,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     justifyContent: "center",
     alignItems: "center",
+    fontSize: "1.8rem",
+    "@media(max-width: 500px)": {
+      fontSize: "1rem",
+    },
+    fontStyle: "italic",
   },
 }));
 

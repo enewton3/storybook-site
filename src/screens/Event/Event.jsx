@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     // paddingBottom: "10vh",
     height: "100%",
     width: "100vw",
+    "@media(max-width: 500px)": {
+      // justifyContent: "space-around",
+    },
   },
   logos: {
     display: "flex",
@@ -29,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     width: "55vw",
+    marginTop: "2vh",
     minHeight: "6.9vh",
     "@media(max-width: 1024px)": {
       width: "70vw",
@@ -85,6 +89,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     "@media(max-width: 500px)": {
       position: "relative",
+      marginTop: "20vh",
     },
   },
   button: {
