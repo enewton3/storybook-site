@@ -15,13 +15,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexFlow: "column wrap",
     alignItems: "center",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
     // justifyContent: "space-around",
     // paddingBottom: "10vh",
     height: "100%",
-    width: "100vw",
-    "@media(max-width: 500px)": {
-      // justifyContent: "space-around",
-    },
+    width: "100%",
   },
   logos: {
     display: "flex",
@@ -49,6 +49,10 @@ const useStyles = makeStyles((theme) => ({
   },
   vimeoframe: {
     width: "50vw",
+
+    "@media(min-width: 1500px)": {
+      width: "40vw",
+    },
     "@media(max-width: 1400px)": {
       width: "50vw",
     },
