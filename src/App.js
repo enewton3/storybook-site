@@ -38,28 +38,28 @@ function App() {
 
   return (
     <div className={classes.app}>
-      {/* <div className={classes.everything}> */}
-      <ThemeProvider theme={theme}>
-        <UserContext.Provider value={currentGuest}>
-          <Layout>
-            <Switch>
-              <Route path="/panel">
-                <AdminContainer />
-              </Route>
-              <Route path="/event">
-                <Event currentGuest={currentGuest} />
-              </Route>
-              <Route exact path="/">
-                <Welcome
-                  currentGuest={currentGuest}
-                  setCurrentGuest={setCurrentGuest}
-                />
-              </Route>
-            </Switch>
-          </Layout>
-        </UserContext.Provider>
-      </ThemeProvider>
-      {/* </div> */}
+      <div className={classes.everything}>
+        <ThemeProvider theme={theme}>
+          <UserContext.Provider value={currentGuest}>
+            <Layout>
+              <Switch>
+                <Route path="/panel">
+                  <AdminContainer />
+                </Route>
+                <Route path="/event">
+                  <Event currentGuest={currentGuest} />
+                </Route>
+                <Route exact path="/">
+                  <Welcome
+                    currentGuest={currentGuest}
+                    setCurrentGuest={setCurrentGuest}
+                  />
+                </Route>
+              </Switch>
+            </Layout>
+          </UserContext.Provider>
+        </ThemeProvider>
+      </div>
     </div>
   );
 }

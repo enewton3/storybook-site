@@ -121,9 +121,6 @@ export default function Event({ currentGuest }) {
       <div className={classes.vimeoframe}>
         <VimeoFrame />
       </div>
-      <div className={classes.support}>
-        <SupportButton />
-      </div>
       <div className={classes.actionButtons}>
         <a
           href="https://www.storybookball.org/donate"
@@ -141,6 +138,9 @@ export default function Event({ currentGuest }) {
         >
           <EnterButton color={"yellow"}>Celebrate</EnterButton>
         </a>
+      </div>
+      <div className={classes.support}>
+        <SupportButton />
       </div>
     </div>
   );

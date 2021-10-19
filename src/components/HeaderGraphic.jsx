@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: "1.8rem",
+    fontSize: "1.5rem",
     "@media(max-width: 500px)": {
       fontSize: "1rem",
     },
