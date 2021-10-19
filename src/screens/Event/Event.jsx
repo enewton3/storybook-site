@@ -13,12 +13,12 @@ const useStyles = makeStyles((theme) => ({
   event: {
     backgroundImage: `url(${backgroundimg})`,
     display: "flex",
-    flexFlow: "column wrap",
+    flexFlow: "column nowrap",
     alignItems: "center",
+    // justifyContent: "space-around",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    // justifyContent: "space-around",
     // paddingBottom: "10vh",
     height: "100%",
     width: "100%",
@@ -91,7 +91,11 @@ const useStyles = makeStyles((theme) => ({
   support: {
     position: "fixed",
     bottom: 0,
-    "@media(max-width: 500px)": {
+    "@media(max-width: 800px)": {
+      position: "relative",
+      marginTop: "20vh",
+    },
+    "@media(max-height: 600px)": {
       position: "relative",
       marginTop: "20vh",
     },

@@ -10,14 +10,14 @@ import SupportButton from "../../components/SupportButton";
 const useStyles = makeStyles((theme) => ({
   welcome: {
     display: "flex",
-    flexFlow: "column wrap",
+    flexFlow: "column nowrap",
     backgroundImage: `url(${backgroundimg})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     margin: "0 auto",
-    height: "100vh",
-    width: "100vw",
+    height: "100%",
+    width: "100%",
     textAlign: "center",
     alignItems: "center",
     justifyContent: "space-evenly",
